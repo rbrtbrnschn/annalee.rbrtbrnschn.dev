@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CategoryItem from "./category_item"
 import PackageListItem from "./package_list_item"
 import BoxItem from "./box_item"
+import Prism from "prismjs"
 
 export default class Categories extends Component {
     constructor(props) {
@@ -14,19 +15,21 @@ export default class Categories extends Component {
 
     }
     componentDidMount() {
-        /*
-        const uri = "http://localhost:8080/webapp"
+        
+        const uri = "/api/webapp"
         fetch(uri)
-            .then(res => {
+            .then(res => 
                 res.json()
+            )
+            .then(result => {
+                const oldState = { ...this.state }
+                this.setState({...oldState,packages: result})
             })
-            .then(res => {
-                //const oldState = { ...this.state }
-                console.log("res:", res)
-                //this.setState()
-            })
-            */
     }
+
+		componentDidUpdate(){
+			Prism.highlightAll()
+		}
 
     render() {
 

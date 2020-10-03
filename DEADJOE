@@ -1,0 +1,19 @@
+
+*** These modified files were found in JOE when it aborted on Sat Oct  3 19:43:51 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+exit
+:wq
+save
+quit
+
+*** File '(Unnamed)'
+/home/norlin/dev/annalee.rbrtbrnschn.dev/.git/COMMIT_EDITMSG
+/home/norlin/dev/annalee.rbrtbrnschn.dev/.git/COMMIT_EDITMSG
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
