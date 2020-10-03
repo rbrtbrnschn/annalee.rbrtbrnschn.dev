@@ -4,11 +4,10 @@ export default class BoxItem extends Component {
     render() {
         const { name, description, code } = this.props.item
         return (
-            <div className="box">
+            <div className="box" id={name}>
                 <h4 id="const" className="title is-3">{name}</h4>
                 <article className="message is-primary">
                     <span className="icon has-text-primary">
-                        <i className="fab fa-js"></i>
                     </span>
                     <div className="message-body">
                         {description}
