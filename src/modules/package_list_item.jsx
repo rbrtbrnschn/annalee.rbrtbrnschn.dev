@@ -6,7 +6,7 @@ export default class PackageListItem extends Component {
         const { item } = this.props
         return (
             <div>
-                <li ><span className="tag is-white is-medium">{item.name}</span></li>
+                <a href={"#box-" + item.name} ><span className="tag is-white is-medium">{item.name}</span></a>
             </div>
         )
     }

@@ -10,26 +10,48 @@ export default class Categories extends Component {
         this.state = {
             categories:
                 [{ name: "CSS", logo: "fab fa-css3-alt" }, { name: "JS", logo: "fab fa-js" }, { name: "HTML", logo: "fab fa-html5" }],
-            packages: [{ name: "abc", desc: "no description given", code: "#!/bin/bash\n\nfunction abc {\n\tSTRING=\"a b c d e f g i f g h i j k l m n o p q r s t u v w x y z\"\n\tfor CHAR in $STRING;do\n\t\tCOLOR=$((1 + RANDOM % 10))\n\t\tprintf \"%s\" \"$(tput setaf $COLOR)\" \"$CHAR\" \"$(tput sgr0) \"\n\tdone\n\techo\n}" }]
+            packages: [{ name: "abc", desc: "no description given", code: "#!/bin/bash\n\nfunction abc {\n\tSTRING=\"a b c d e f g i f g h i j k l m n o p q r s t u v w x y z\"\n\tfor CHAR in $STRING;do\n\t\tCOLOR=$((1 + RANDOM % 10))\n\t\tprintf \"%s\" \"$(tput setaf $COLOR)\" \"$CHAR\" \"$(tput sgr0) \"\n\tdone\n\techo\n}" }],
+            queryCategory: "",
+            isQuerying: false
         }
-
     }
+
+    handleCategoryChange = (category) => {
+        const currentState = { ...this.state }
+        const currentQuery = currentState.queryCategory
+        const isNewQuery = currentQuery !== category
+        let boo = isNewQuery
+        if (isNewQuery && currentState.isQuerying) boo = true
+
+        this.setState({ ...currentState, queryCategory: category, isQuerying: boo })
+    }
+
+
     componentDidMount() {
-        
-        const uri = "/api/webapp"
-        fetch(uri)
-            .then(res => 
+        const dev = true
+        const packages_uri = dev ? "https://annalee.rbrtbrnschn.dev/api/webapp" : "/api/webapp"
+        fetch(packages_uri)
+            .then(res =>
                 res.json()
             )
             .then(result => {
                 const oldState = { ...this.state }
-                this.setState({...oldState,packages: result})
+                this.setState({ ...oldState, packages: result })
+            })
+        const categories_uri = dev ? "https://annalee.rbrtbrnschn.dev/api/topCategories" : "/api/topCategories"
+        fetch(categories_uri)
+            .then(res =>
+                res.json()
+            )
+            .then(result => {
+                const oldState = { ...this.state }
+                this.setState({ ...oldState, categories: result })
             })
     }
 
-		componentDidUpdate(){
-			Prism.highlightAll()
-		}
+    componentDidUpdate() {
+        Prism.highlightAll()
+    }
 
     render() {
 
@@ -43,13 +65,13 @@ export default class Categories extends Component {
                                     categories
           </p>
                                 <ul className="menu-list">
-                                    {this.state.categories.map((item, i) => <CategoryItem item={item} />)}
+                                    {this.state.categories.map((item, i) => <CategoryItem key={"category-" + i} item={item} handleChange={this.handleCategoryChange} />)}
                                 </ul>
                                 <p className="menu-label">
                                     More to read...
               </p>
                                 <ul className="menu-list">
-                                    {this.state.packages.map((item, i) => <PackageListItem item={item} />)}
+                                    {this.state.packages.map((item, i) => <PackageListItem key={"package--item-" + i} item={item} />)}
                                 </ul>
 
                             </aside>
@@ -57,7 +79,14 @@ export default class Categories extends Component {
                         <div className="column is-9">
                             <div className="content is-medium">
                                 <h3 className="title is-3">Snippets ¯\_(ツ)_/¯</h3>
-                                {this.state.packages.map((item, i) => <BoxItem item={item} />)}
+                                {
+                                    this.state.packages.map((item, i) => {
+                                        if (!this.state.isQuerying) return <BoxItem key={"box-item-" + i} item={item} />
+
+                                        return item.categories === this.state.queryCategory
+                                            ? <BoxItem key={"box-item-" + i} item={item} />
+                                            : <div key={"div-item-" + i}> </div>
+                                    })}
 
 
                             </div>
