@@ -4,11 +4,13 @@ Landing page for Annalee - Bash Package Manager
 
 * [ ] add footer
 
-* [ ] change README.md to package.lee
+* [X] change README.md to package.lee
 
-* [ ] add DESCRIPTION, CATEGORIES, TAGS to package.lee
+* [X] add DESCRIPTION, CATEGORIES, TAGS to package.lee
 
-* [ ] make left list clickable
+* [X] make left list clickable
+
+* [ ] make left side sticky
 
 <hr/> 
 
