@@ -14,6 +14,8 @@ Landing page for Annalee - Bash Package Manager
 
 * [X] add save2clipboard button
 
+* [ ] onUpdate save to localStorage, onMount use localstorage as state
+
 <hr/> 
 
 > This project was conceived to 'Un Poco Loco from Coco'
