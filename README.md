@@ -10,7 +10,9 @@ Landing page for Annalee - Bash Package Manager
 
 * [X] make left list clickable
 
-* [ ] make left side sticky
+* [X] make left side sticky
+
+* [X] add save2clipboard button
 
 <hr/> 
 
