@@ -39,6 +39,9 @@ export default class Categories extends Component {
         this.setState({ ...currentState, queryCategory: category, isQuerying: boo })
     }
 
+    handleCategoryAll = () => {
+        this.setState({ ...this.state, isQuerying: false })
+    }
 
     componentDidMount() {
         const dev = true
@@ -79,13 +82,24 @@ export default class Categories extends Component {
                                     categories
           </p>
                                 <ul className="menu-list">
+                                    <CategoryItem key="category-all" item={{ name: "All" }} handleChange={this.handleCategoryAll} />
                                     {this.state.categories.map((item, i) => <CategoryItem key={"category-" + i} item={item} handleChange={this.handleCategoryChange} />)}
                                 </ul>
                                 <p className="menu-label">
                                     Packages
               </p>
                                 <ul className="menu-list">
-                                    {this.state.packages.map((item, i) => <PackageListItem key={"package--item-" + i} item={item} />)}
+                                    {
+                                        this.state.packages.map((item, i) => {
+                                            if (!this.state.isQuerying) return <PackageListItem key={"package--item-" + i} item={item} />
+
+                                            return item.categories === this.state.queryCategory
+                                                ? <PackageListItem key={"package--item-" + i} item={item} />
+                                                : <div key={"div-item-" + i}> </div>
+
+                                        })
+                                    }
+
                                 </ul>
 
                             </aside>

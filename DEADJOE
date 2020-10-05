@@ -17,3 +17,68 @@ Processing '/etc/joe/editorrc'...
 Processing '/etc/joe/ftyperc'...
 Finished processing /etc/joe/ftyperc
 Finished processing /etc/joe/editorrc
+
+*** These modified files were found in JOE when it aborted on Mon Oct  5 14:36:10 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+/home/norlin/dev/annalee.rbrtbrnschn.dev/.git/COMMIT_EDITMSG
+
+*** File '/home/norlin/dev/annalee.rbrtbrnschn.dev/.git/COMMIT_EDITMSG'
+added footer
+# Please ente the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch slave
+# Your branch is up to date with 'origin/slave'.
+#
+# Changes to be committed:
+#	modified:   package.json
+#	modified:   public/index.html
+#	modified:   src/modules/box_item.jsx
+#	modified:   src/modules/categories.jsx
+#	modified:   src/modules/category_item.jsx
+#	modified:   src/modules/footer.jsx
+#	modified:   src/modules/header.jsx
+#	modified:   src/modules/package_list_item.jsx
+#
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
+
+*** These modified files were found in JOE when it aborted on Mon Oct  5 14:36:41 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+/home/norlin/dev/annalee.rbrtbrnschn.dev/.git/COMMIT_EDITMSG
+
+*** File '/home/norlin/dev/annalee.rbrtbrnschn.dev/.git/COMMIT_EDITMSG'
+added footer
+# Please
+
++ enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch slave
+# Your branch is up to date with 'origin/slave'.
+#
+# Changes to be committed:
+#	modified:   DEADJOE
+#	modified:   package.json
+#	modified:   public/index.html
+#	modified:   src/modules/box_item.jsx
+#	modified:   src/modules/categories.jsx
+#	modified:   src/modules/category_item.jsx
+#	modified:   src/modules/footer.jsx
+#	modified:   src/modules/header.jsx
+#	modified:   src/modules/package_list_item.jsx
+#
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc

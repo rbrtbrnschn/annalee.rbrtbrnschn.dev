@@ -37,7 +37,7 @@ export default class BoxItem extends Component {
                         {description}
                     </div>
                 </article>
-                <pre><code className="language-bash">{code}</code></pre>
+                <pre style={{ maxHeight: "35vh" }} ><code className="language-bash">{code}</code></pre>
             </div>
 
         )

@@ -9,9 +9,9 @@ export default class Header extends Component {
                         <div className="column is-12">
                             <div className="container content">
                                 <i className="is-large fas fa-terminal"></i>
-                                <h1 className="title">Annalee</h1>
+                                <h1 className="title">Annalee </h1>
                                 <h3 className="subtitle">
-                                    <em>Bash Package Manager</em>
+																<em>Bash Package Manager</em>
                                 </h3>
                                 <a
                                     href="https://github.com/rbrtbrnschn/bash-cheat-sheet"

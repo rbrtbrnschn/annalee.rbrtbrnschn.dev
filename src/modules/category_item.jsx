@@ -8,7 +8,7 @@ export default class CategoryItem extends Component {
         // available: {logo}
         return (
             <div>
-                <li className="is-right"><a onClick={() => { handleChange(name) }} className="is-active"><i className="logo"></i> {name}</a></li>
+                <li style={{ textTransform: "capitalize" }} className="is-right"><a onClick={() => { handleChange(name) }} className="is-active"><i className="logo"></i> {name}</a></li>
             </div>
         )
     }
