@@ -2,7 +2,7 @@
 Landing page for Annalee - Bash Package Manager
 ## TODO
 
-* [ ] add footer
+* [X] add footer
 
 * [X] change README.md to package.lee
 
